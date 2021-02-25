@@ -1,0 +1,49 @@
+main {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px;
+    margin: auto;
+    width: 500px;
+    border: 1px black;
+    border-style: solid;
+}
+#user-id {
+    margin: 10px;
+    
+}
+#button-get {
+    margin: 10px;
+}
+.result-header {
+    margin: 10px;
+    text-align: center;
+    background: black;
+    color: white;
+    font-size: 20px;
+}
+.result-tasklist {
+    margin: 5px;
+    color: hsl(0, 0%, 25%);
+    /* list-style: none; */
+    text-align: left;
+    font-size: 15px;
+}
+
+.result-tasklist :nth-child(odd) {
+    background-color: hsl(0, 0%, 90%);
+}
+.result-tasklist :nth-child(even) {
+    background-color: hsl(0, 0%, 95%);
+}
+.result-tasklist .completed {
+    text-decoration: line-through;
+    color: hsl(0, 0%, 35%);
+    margin: 5px;
+}
+
+.result-tasklist .to-do {
+    color: red;
+    margin: 5px;
+}

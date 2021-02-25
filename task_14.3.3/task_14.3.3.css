@@ -1,0 +1,41 @@
+.request__result {
+    background-color: rgba(201, 183, 183, 0.705);
+    justify-content: space-between;
+    width: fit-content;
+    margin: 15px;
+    border: 1px black;
+    /* border-style: solid; */
+}
+
+.table-header {
+    text-align: center;
+    background-color: rgb(0, 0, 0);
+    color: white;
+}
+.table-amount {
+    text-align: center;
+    display: flex;
+}
+.table-column :nth-child(even){
+    background-color: rgba(221, 214, 215, 0.842);
+    border: 1px black;
+    border-style:solid;
+
+}
+
+.table-column :nth-child(odd){
+    background-color: rgba(99, 100, 99, 0.39);
+    border: 1px black;
+    border-style: solid;
+
+}
+.table-element-header {
+    text-align: center;
+    width: 100px;
+}
+
+.table-element {
+    border: 1px black;
+    border-style: solid;
+
+}

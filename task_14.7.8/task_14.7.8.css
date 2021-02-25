@@ -1,0 +1,54 @@
+main {
+    margin: auto;
+    width: 600px;
+}
+.form {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    margin: auto;
+    padding: 10px;
+    border: grey 1px;
+    border-style: solid;
+    background-color: hsl(0, 0%, 95%);;
+}
+.form div {
+    text-align: right;
+    margin: 5px;
+}
+.form input {
+    width: 150px;
+    margin: 5px;
+}
+.form #input-button {
+    margin-left: auto;
+    margin-right: auto;
+    width: 150px;
+
+}
+.result {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 15px;
+}
+.result p {
+    margin: auto;
+}
+
+.single-image-div {
+    margin: 10px;
+    padding: 10px;
+    background-color: hsl(0, 0%, 90%);
+}
+
+.single-image-div p {
+    text-align: center;
+}
+
+.single-image-div .image {
+    display: flex;
+    width: 200px;
+    background-size: contain;
+}
