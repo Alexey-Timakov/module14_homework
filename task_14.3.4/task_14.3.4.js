@@ -18,29 +18,29 @@ document.addEventListener("DOMContentLoaded", function(){
     })
 
     function getRequest(url, year, callback) {
-        let tempString = `[{"year":2017,"sales":{"q1":86879,"q2":28566,"q3":89457,"q4":27707}},{"year":2018,"sales":{"q1":45219,"q2":52851,"q3":76766,"q4":83064}},{"year":2019,"sales":{"q1":35645,"q2":56145,"q3":38550,"q4":47825}}]`;
-        // let xhr = new XMLHttpRequest();
+        // let tempString = `[{"year":2017,"sales":{"q1":86879,"q2":28566,"q3":89457,"q4":27707}},{"year":2018,"sales":{"q1":45219,"q2":52851,"q3":76766,"q4":83064}},{"year":2019,"sales":{"q1":35645,"q2":56145,"q3":38550,"q4":47825}}]`;
+        let xhr = new XMLHttpRequest();
 
-        // xhr.open("GET", url, true);
+        xhr.open("GET", url, true);
 
-        // xhr.onload = function (){
-            // if (xhr.status != 200){
-                // console.log(`Статус ответа: ${xhr.status}`);
-            // } else {
-                // const resultRequest = JSON.parse(xhr.response);
-                const resultRequest = JSON.parse(tempString);
-                // console.log(resultRequest);
+        xhr.onload = function (){
+            if (xhr.status != 200){
+                console.log(`Статус ответа: ${xhr.status}`);
+            } else {
+                const resultRequest = JSON.parse(xhr.response);
+                // const resultRequest = JSON.parse(tempString);
+                console.log(resultRequest);
                 if (callback) {
                     callback(resultRequest, year);
                 }
-            // }
-        // }
+            }
+        }
 
-        // xhr.onerror = function(){
-            // console.log(`Ошибка! Статус ответа: ${xrh.status}`);
-        // }
+        xhr.onerror = function(){
+            console.log(`Ошибка! Статус ответа: ${xrh.status}`);
+        }
 
-        // xhr.send();
+        xhr.send();
     }
 
     function displayResult(data, year){
